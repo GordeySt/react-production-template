@@ -3,5 +3,7 @@
     "Translate": "Перевод",
     "Main": "Главная страница",
     "About": "О себе",
-    "NotFoundPage": "Страница не найдена"
+    "NotFoundPage": "Страница не найдена",
+    "SomethingWrong": "Что-то пошло не так",
+    "RefreshPage": "Обновить страницу"
 }

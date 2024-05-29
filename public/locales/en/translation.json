@@ -3,5 +3,7 @@
     "Translate": "Translate",
     "Main": "Main Page",
     "About": "About Page",
-    "NotFoundPage": "Page Not Found"
+    "NotFoundPage": "Page Not Found",
+    "SomethingWrong": "Something went wrong",
+    "RefreshPage": "Refresh this page"
 }
