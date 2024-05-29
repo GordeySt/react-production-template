@@ -22,6 +22,7 @@ const config: Config = {
     ],
     testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
     rootDir: '../..',
+    modulePaths: ['<rootDir>src'],
 };
 
 export default config;
