@@ -23,6 +23,11 @@ const config: Config = {
     testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
     rootDir: '../..',
     modulePaths: ['<rootDir>src'],
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': '<rootDir>config/jest/jestEmptyComponent.tsx',
+    },
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
 };
 
 export default config;
