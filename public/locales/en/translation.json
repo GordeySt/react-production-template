@@ -5,5 +5,7 @@
     "About": "About Page",
     "NotFoundPage": "Page Not Found",
     "SomethingWrong": "Something went wrong",
-    "RefreshPage": "Refresh this page"
+    "RefreshPage": "Refresh this page",
+    "ShortLang": "En",
+    "Lang": "English"
 }
