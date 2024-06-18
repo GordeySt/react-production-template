@@ -4,8 +4,7 @@
 @import 'variables/global';
 
 body {
-    font-size: var(--font-m);
-    background: var(--bg-color);
+    font: var(--font-m);
     color: var(--primary-color);
 }
 
