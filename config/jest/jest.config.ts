@@ -28,6 +28,9 @@ const config: Config = {
         '\\.svg': '<rootDir>config/jest/jestEmptyComponent.tsx',
     },
     setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+    globals: {
+        __IS_DEV__: true,
+    },
 };
 
 export default config;
