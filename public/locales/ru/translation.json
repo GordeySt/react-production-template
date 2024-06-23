@@ -8,5 +8,7 @@
     "RefreshPage": "Обновить страницу",
     "ShortLang": "Ру",
     "Lang": "Русский",
-    "Login": "Войти"
+    "Login": "Войти",
+    "EnterUsername": "Введите username",
+    "EnterPassword": "Введите пароль"
 }

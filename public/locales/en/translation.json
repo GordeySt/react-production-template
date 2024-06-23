@@ -8,5 +8,7 @@
     "RefreshPage": "Refresh this page",
     "ShortLang": "En",
     "Lang": "English",
-    "Login": "Login"
+    "Login": "Login",
+    "EnterUsername": "Enter username",
+    "EnterPassword": "Enter password"
 }
