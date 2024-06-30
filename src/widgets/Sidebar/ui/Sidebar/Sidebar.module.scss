@@ -16,12 +16,6 @@
     width: 100%;
 }
 
-.collapseBtn {
-    position: absolute;
-    right: -32px;
-    bottom: 32px;
-}
-
 .items {
     margin-top: 20px;
     display: flex;
@@ -30,18 +24,10 @@
     margin-left: 20px;
 }
 
-.item {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.link {
-    margin-left: 10px;
-}
-
-.icon {
-    fill: var(--inverted-primary-color);
+.collapseBtn {
+    position: absolute;
+    right: -32px;
+    bottom: 32px;
 }
 
 .collapsed {
@@ -49,9 +35,5 @@
 
     .lang {
         margin-left: 0;
-    }
-
-    .link {
-        display: none;
     }
 }
