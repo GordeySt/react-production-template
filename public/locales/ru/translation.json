@@ -12,5 +12,6 @@
     "EnterUsername": "Введите username",
     "EnterPassword": "Введите пароль",
     "LoginError": "Неверный логин или пароль",
+    "Profile": "Профиль",
     "Logout": "Выйти"
 }

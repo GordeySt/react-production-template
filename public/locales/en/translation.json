@@ -12,5 +12,6 @@
     "EnterUsername": "Enter username",
     "EnterPassword": "Enter password",
     "LoginError": "Invalid username or password",
+    "Profile": "Profile",
     "Logout": "Logout"
 }
