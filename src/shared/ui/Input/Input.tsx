@@ -6,19 +6,20 @@ import {
     useRef,
     useState,
 } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
 
 type HTMLInputProps = Omit<
     InputHTMLAttributes<HTMLInputElement>,
-    'value' | 'onChange'
+    'value' | 'onChange' | 'readonly'
 >;
 
 interface InputProps extends HTMLInputProps {
     className?: string;
-    value?: string;
+    value?: string | number;
     autofocus?: boolean;
     onChange?: (value: string) => void;
+    readonly?: boolean;
 }
 
 export const Input = memo((props: InputProps) => {
@@ -29,12 +30,19 @@ export const Input = memo((props: InputProps) => {
         type = 'text',
         placeholder,
         autofocus,
+        readonly,
         ...otherProps
     } = props;
 
     const ref = useRef<HTMLInputElement>(null);
     const [isFocused, setIsFocused] = useState(false);
     const [carriagePosition, setCarriagePosition] = useState(0);
+
+    const mods: Mods = {
+        [cls.readonly]: readonly,
+    };
+
+    const isCarriageVisible = isFocused && !readonly;
 
     useEffect(() => {
         if (autofocus) {
@@ -61,7 +69,7 @@ export const Input = memo((props: InputProps) => {
     };
 
     return (
-        <div className={classNames(cls.InputWrapper, {}, [className])}>
+        <div className={classNames(cls.InputWrapper, mods, [className])}>
             {placeholder && (
                 <div className={cls.placeholder}>{`${placeholder}>`}</div>
             )}
@@ -70,6 +78,7 @@ export const Input = memo((props: InputProps) => {
                     ref={ref}
                     type={type}
                     value={value}
+                    readOnly={readonly}
                     onChange={onChangeHandler}
                     className={cls.input}
                     onFocus={onFocus}
@@ -77,7 +86,7 @@ export const Input = memo((props: InputProps) => {
                     onSelect={onSelect}
                     {...otherProps}
                 />
-                {isFocused && (
+                {isCarriageVisible && (
                     <span
                         className={cls.carriage}
                         style={{ left: `${carriagePosition * 9}px` }}
